@@ -5,7 +5,7 @@
     {
       Serial.begin(9600);  //통신속도설정 9600bps
       pinMode(trig, OUTPUT); // trig 핀 출력 설정
-      pinMode(echo, INPUT);  // echo 핀 입력 설정
+      pinMode(echo, INPUT);  // echo 핀 입력 설정ddd
     }
     
     void loop()  // 무한루프
