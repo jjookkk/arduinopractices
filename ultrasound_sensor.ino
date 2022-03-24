@@ -24,5 +24,5 @@
       digitalWrite(trig, LOW);  // 초음파 발사 정지
       return_time = pulseIn(echo, HIGH);  // 돌아오는 시간
       howlong = ((float)(340*return_time) / 10000) /2;  // 시간을 거리로 계산
-      return howlong;   // 거리 값 리턴
+      return howlong;   // 거리 값 리턴ddd
     }
