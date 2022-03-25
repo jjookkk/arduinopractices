@@ -12,3 +12,4 @@ void loop()  // 무한루프
   lcd.setCursor(3, 1); // 커서 네번째칸 두번째줄 위치
   lcd.print("the LK world!");  // the LK world! 문자 출력
 }
+

@@ -1,17 +1,24 @@
+#include <LiquidCrystal_I2C.h>
+LiquidCrystal_I2C lcd(0x27, 16, 2);
+
 #define echo 6 //초음파 센서 모듈 에코(Echo) 핀, 아두이노 우노 R3의 디지털 6번 핀 연결
 #define trig 7 //초음파 센서 모듈 트리거(Trigger) 핀, 아두이노 우노 R3의 디지털 7번 핀 연결
     
     void setup() //초기화
     {
       Serial.begin(9600);  //통신속도설정 9600bps
+      lcd.init();
+      lcd.backlight();
       pinMode(trig, OUTPUT); // trig 핀 출력 설정
       pinMode(echo, INPUT);  // echo 핀 입력 설정ddd
     }
     
     void loop()  // 무한루프
     {
-      Serial.print(" Check the value ! " );  //시리얼모니터에 "Check the value ! " 출력
-      Serial.println( read_ultrasonic());  // 초음파 센서 모듈 거리계산 함수 실행
+      
+      lcd.setCursor(0,0);
+      lcd.print(" Check the value ! " );  //시리얼모니터에 "Check the value ! " 출력
+      //Serial.print( read_ultrasonic());  // 초음파 센서 모듈 거리계산 함수 실행
       delay(500); // 0.5초간 지연
     }
     
